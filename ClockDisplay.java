@@ -34,4 +34,9 @@ public class ClockDisplay
     public void getValue(){
         System.out.println(horas.getValor() + " " + minutos.getValor());
     }
+    
+    //Aumenta la hora en 1 minuto
+    public void increment(){
+        minutos.increment();
+    }
 }

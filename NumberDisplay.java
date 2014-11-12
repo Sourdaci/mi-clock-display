@@ -31,4 +31,9 @@ public class NumberDisplay
     public void setValue(int nuevoValor){
         valor = nuevoValor;
     }
+    
+    //Suma 1 minuto al reloj
+    public void increment(){
+        valor =+ 1;
+    }
 }

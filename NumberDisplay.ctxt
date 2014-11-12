@@ -7,4 +7,6 @@ comment1.target=int\ getValor()
 comment1.text=\r\n\ Devuelve\ el\ numero\ almacenado\ en\ "valor"\r\n
 comment2.params=nuevoValor
 comment2.target=void\ setValue(int)
-numComments=3
+comment3.params=
+comment3.target=void\ increment()
+numComments=4
