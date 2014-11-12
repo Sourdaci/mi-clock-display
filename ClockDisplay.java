@@ -19,9 +19,7 @@ public class ClockDisplay
     
     //Mostrar la hora del reloj
     public void getDisplayValue(){
-        int tempHoras = horas.getValor();
-        int tempMinutos = minutos.getValor();
-        System.out.println(String.format("%02d",tempHoras) + ":" + String.format("%02d",tempMinutos));
+        System.out.println(horas.getDisplayValue() + ":" + minutos.getDisplayValue());
     }
     
     //Cambia la hora del reloj
@@ -38,5 +36,8 @@ public class ClockDisplay
     //Aumenta la hora en 1 minuto
     public void increment(){
         minutos.increment();
+        if(minutos.getValor() == 0){
+            horas.increment();
+        }
     }
 }

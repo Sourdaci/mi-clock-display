@@ -27,6 +27,10 @@ public class NumberDisplay
         return valor;
     }
     
+    public String getDisplayValue(){
+        return String.format("%02d",valor);
+    }
+    
     //Cambia el numero almacenado en "valor"
     public void setValue(int nuevoValor){
         valor = nuevoValor;
@@ -35,5 +39,13 @@ public class NumberDisplay
     //Suma 1 minuto al reloj
     public void increment(){
         valor =+ 1;
+        validar();
+    }
+    
+    //Valida los valores introducidos
+    public void validar(){
+        while (valor >= limite){
+            valor =- limite;
+        }
     }
 }
