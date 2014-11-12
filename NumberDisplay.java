@@ -26,4 +26,9 @@ public class NumberDisplay
     {
         return valor;
     }
+    
+    //Cambia el numero almacenado en "valor"
+    public void setValue(int nuevoValor){
+        valor = nuevoValor;
+    }
 }

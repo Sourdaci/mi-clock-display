@@ -23,4 +23,10 @@ public class ClockDisplay
         int tempMinutos = minutos.getValor();
         System.out.println(String.format("%02d",tempHoras) + ":" + String.format("%02d",tempMinutos));
     }
+    
+    //Cambia la hora del reloj
+    public void setValue(int nuevaHora, int nuevoMinuto){
+        horas.setValue(nuevaHora);
+        minutos.setValue(nuevoMinuto);
+    }
 }
