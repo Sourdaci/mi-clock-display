@@ -18,6 +18,13 @@ public class NumberDisplay
         limite = nuevoLimite; //Recibe de ClockDisplay 24 para horas o 60 para minutos
         valor = 0;
     }
+    
+    //Constructor que interpreta valor si no esta dentro de los limites
+    public NumberDisplay(int nuevoLimite, int nuevoValor){
+        limite = nuevoLimite;
+        valor = nuevoValor;
+        validar();
+    }
 
     /**
      * Devuelve el numero almacenado en "valor"
@@ -38,14 +45,14 @@ public class NumberDisplay
     
     //Suma 1 minuto al reloj
     public void increment(){
-        valor =+ 1;
+        valor += 1;
         validar();
     }
     
     //Valida los valores introducidos
     public void validar(){
         while (valor >= limite){
-            valor =- limite;
+            valor -= limite;
         }
     }
 }

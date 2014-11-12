@@ -17,6 +17,12 @@ public class ClockDisplay
         minutos = new NumberDisplay(60);
     }
     
+    //Constructor ClockDisplay que pide hora
+    public ClockDisplay(int nuevaHora, int nuevoMinuto){
+        horas = new NumberDisplay(24, nuevaHora);
+        minutos = new NumberDisplay(60, nuevoMinuto);
+    }
+    
     //Mostrar la hora del reloj
     public void getDisplayValue(){
         System.out.println(horas.getDisplayValue() + ":" + minutos.getDisplayValue());
@@ -26,6 +32,8 @@ public class ClockDisplay
     public void setValue(int nuevaHora, int nuevoMinuto){
         horas.setValue(nuevaHora);
         minutos.setValue(nuevoMinuto);
+        horas.validar();
+        minutos.validar();
     }
     
     //Muestra los valores almacenados en los NumberDisplay
