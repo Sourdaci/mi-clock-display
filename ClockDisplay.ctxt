@@ -6,4 +6,6 @@ comment1.params=
 comment1.target=void\ getDisplayValue()
 comment2.params=nuevaHora\ nuevoMinuto
 comment2.target=void\ setValue(int,\ int)
-numComments=3
+comment3.params=
+comment3.target=void\ getValue()
+numComments=4

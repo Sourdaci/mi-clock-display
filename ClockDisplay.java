@@ -29,4 +29,9 @@ public class ClockDisplay
         horas.setValue(nuevaHora);
         minutos.setValue(nuevoMinuto);
     }
+    
+    //Muestra los valores almacenados en los NumberDisplay
+    public void getValue(){
+        System.out.println(horas.getValor() + " " + minutos.getValor());
+    }
 }
