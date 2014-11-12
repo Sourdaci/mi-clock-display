@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nuevoLimite
+comment0.target=NumberDisplay(int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ NumberDisplay\r\n
+comment1.params=
+comment1.target=int\ getValor()
+comment1.text=\r\n\ Devuelve\ el\ numero\ almacenado\ en\ "valor"\r\n
+numComments=2
