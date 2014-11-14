@@ -51,7 +51,7 @@ public class NumberDisplay
     
     //Valida los valores introducidos
     public void validar(){
-        if (valor >= limite){
+        if (valor >= limite || valor < 0){
             valor = 0;
         }
     }
