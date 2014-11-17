@@ -29,7 +29,7 @@ public class NumberDisplay
     /**
      * Devuelve el numero almacenado en "valor"
      */
-    public int getValor()
+    public int getValue()
     {
         return valor;
     }
@@ -41,6 +41,7 @@ public class NumberDisplay
     //Cambia el numero almacenado en "valor"
     public void setValue(int nuevoValor){
         valor = nuevoValor;
+        validar();
     }
     
     //Suma 1 minuto al reloj
