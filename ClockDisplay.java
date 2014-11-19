@@ -27,17 +27,30 @@ public class ClockDisplay
         getDisplayValue();
     }
     
-    //Refresca en memoria la hora del reloj
+    /**
+    //Refresca en memoria la hora del reloj en formato 24H
     private void getDisplayValue(){
         cadenaHora = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
     }
+    */
     
-    //Muestra la hora del reloj
-    public String getTime()
-    {
+    //Refresca en memoria la hora del reloj en formato 12H
+    private void getDisplayValue(){
+        if (horas.getValue() == 0){
+            cadenaHora = "12:" + minutos.getDisplayValue() + " A.M.";
+        }else if (horas.getValue() > 0 && horas.getValue() < 12){
+            cadenaHora = horas.getDisplayValue() + ":" + minutos.getDisplayValue() + " A.M.";
+        }else if (horas.getValue() == 12){
+            cadenaHora = "12:" + minutos.getDisplayValue() + " P.M.";
+        }else{
+            cadenaHora = String.format("%02d",(horas.getValue() - 12))+ ":" + minutos.getDisplayValue() + " P.M";
+        }
+    }
+   
+    //Muestra la hora
+    public String getTime(){
         return cadenaHora;
     }
-    
     //Cambia la hora del reloj
     public void setTime(int nuevaHora, int nuevoMinuto){
         horas.setValue(nuevaHora);
