@@ -28,7 +28,7 @@ public class ClockDisplay
     }
     
     //Refresca en memoria la hora del reloj
-    public void getDisplayValue(){
+    private void getDisplayValue(){
         cadenaHora = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
     }
     
