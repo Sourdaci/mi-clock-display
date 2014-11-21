@@ -29,7 +29,13 @@ public class ClockDisplay
         horas = new NumberDisplay(24, nuevaHora);
         minutos = new NumberDisplay(60, nuevoMinuto);
         dia = new NumberDisplay(31, nuevoDia);
+        if (dia.getValue() == 0){
+            dia.setValue(1);
+        }
         mes = new NumberDisplay(13, nuevoMes);
+        if (mes.getValue() == 0){
+            mes.setValue(1);
+        }
         year = new NumberDisplay(100, nuevoYear);
         getDisplayValue();
     }
