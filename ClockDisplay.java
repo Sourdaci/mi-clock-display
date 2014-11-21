@@ -8,6 +8,7 @@
 public class ClockDisplay
 {
     private NumberDisplay horas, minutos;
+    private NumberDisplay dia, mes, year;
     private String cadenaHora;
     
     /**
@@ -17,13 +18,19 @@ public class ClockDisplay
     {
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
+        dia = new NumberDisplay(31, 1);
+        mes = new NumberDisplay(13, 1);
+        year = new NumberDisplay(100);
         getDisplayValue();
     }
     
-    //Constructor ClockDisplay que pide hora
-    public ClockDisplay(int nuevaHora, int nuevoMinuto){
+    //Constructor ClockDisplay que pide hora y fecha
+    public ClockDisplay(int nuevaHora, int nuevoMinuto, int nuevoDia, int nuevoMes, int nuevoYear){
         horas = new NumberDisplay(24, nuevaHora);
         minutos = new NumberDisplay(60, nuevoMinuto);
+        dia = new NumberDisplay(31, nuevoDia);
+        mes = new NumberDisplay(13, nuevoMes);
+        year = new NumberDisplay(100, nuevoYear);
         getDisplayValue();
     }
     

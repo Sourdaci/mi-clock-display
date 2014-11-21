@@ -2,8 +2,8 @@
 comment0.params=
 comment0.target=ClockDisplay()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ ClockDisplay\r\n
-comment1.params=nuevaHora\ nuevoMinuto
-comment1.target=ClockDisplay(int,\ int)
+comment1.params=nuevaHora\ nuevoMinuto\ nuevoDia\ nuevoMes\ nuevoYear
+comment1.target=ClockDisplay(int,\ int,\ int,\ int,\ int)
 comment2.params=
 comment2.target=void\ getDisplayValue()
 comment2.text=\r\n\ \ \ \ //Refresca\ en\ memoria\ la\ hora\ del\ reloj\ en\ formato\ 24H\r\n\ \ \ \ private\ void\ getDisplayValue(){\r\n\ \ \ \ \ \ \ \ cadenaHora\ \=\ horas.getDisplayValue()\ +\ "\:"\ +\ minutos.getDisplayValue();\r\n\ \ \ \ }\r\n
