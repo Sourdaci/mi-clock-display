@@ -36,14 +36,19 @@ public class ClockDisplay
     
     //Refresca en memoria la hora del reloj en formato 12H
     private void getDisplayValue(){
-        if (horas.getValue() == 0){
-            cadenaHora = "12:" + minutos.getDisplayValue() + " A.M.";
-        }else if (horas.getValue() > 0 && horas.getValue() < 12){
-            cadenaHora = horas.getDisplayValue() + ":" + minutos.getDisplayValue() + " A.M.";
-        }else if (horas.getValue() == 12){
-            cadenaHora = "12:" + minutos.getDisplayValue() + " P.M.";
+		String aM = " A.M.";
+		int controlHora = horas.getValue();
+        if (controlHora == 0){
+            cadenaHora = "12:" + minutos.getDisplayValue() + aM;
+        }else if (controlHora < 12){
+            cadenaHora = horas.getDisplayValue() + ":" + minutos.getDisplayValue() + aM;
         }else{
-            cadenaHora = String.format("%02d",(horas.getValue() - 12))+ ":" + minutos.getDisplayValue() + " P.M";
+			String pM = " P.M.";
+			if (controlHora == 12){
+				cadenaHora = "12:" + minutos.getDisplayValue() + pM;
+			}else{
+				cadenaHora = String.format("%02d",(controlHora - 12))+ ":" + minutos.getDisplayValue() + pM;
+			}
         }
     }
    
