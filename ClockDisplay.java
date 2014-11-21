@@ -63,6 +63,7 @@ public class ClockDisplay
 				cadenaHora = String.format("%02d",(controlHora - 12))+ ":" + minutos.getDisplayValue() + pM;
 			}
         }
+        cadenaHora += " - " + dia.getDisplayValue() + "/" + mes.getDisplayValue() + "/" + year.getDisplayValue();
     }
    
     //Muestra la hora
@@ -80,7 +81,7 @@ public class ClockDisplay
     
     //Muestra los valores almacenados en los NumberDisplay
     public void getValue(){
-        System.out.println(horas.getValue() + " " + minutos.getValue());
+        System.out.println(horas.getValue() + " " + minutos.getValue() + " - " + dia.getValue() + " " + mes.getValue() + " " + year.getValue());
     }
     
     //Aumenta la hora en 1 minuto
