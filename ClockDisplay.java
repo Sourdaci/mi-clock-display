@@ -98,6 +98,17 @@ public class ClockDisplay
         minutos.increment();
         if(minutos.getValue() == 0){
             horas.increment();
+            if(horas.getValue() == 0){
+                dia.increment();
+                if(dia.getValue() == 0){
+                    dia.setValue(1);
+                    mes.increment();
+                    if(mes.getValue() == 0){
+                        mes.setValue(1);
+                        year.increment();
+                    }
+                }
+            }
         }
         getDisplayValue();
     }
