@@ -9,8 +9,8 @@ comment2.target=void\ getDisplayValue()
 comment2.text=\r\n\ \ \ \ //Refresca\ en\ memoria\ la\ hora\ del\ reloj\ en\ formato\ 24H\r\n\ \ \ \ private\ void\ getDisplayValue(){\r\n\ \ \ \ \ \ \ \ cadenaHora\ \=\ horas.getDisplayValue()\ +\ "\:"\ +\ minutos.getDisplayValue();\r\n\ \ \ \ }\r\n
 comment3.params=
 comment3.target=java.lang.String\ getTime()
-comment4.params=nuevaHora\ nuevoMinuto
-comment4.target=void\ setTime(int,\ int)
+comment4.params=nuevaHora\ nuevoMinuto\ nuevoDia\ nuevoMes\ nuevoYear
+comment4.target=void\ setTime(int,\ int,\ int,\ int,\ int)
 comment5.params=
 comment5.target=void\ getValue()
 comment6.params=

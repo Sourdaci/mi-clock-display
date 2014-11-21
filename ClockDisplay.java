@@ -71,11 +71,20 @@ public class ClockDisplay
         return cadenaHora;
     }
     //Cambia la hora del reloj
-    public void setTime(int nuevaHora, int nuevoMinuto){
+    public void setTime(int nuevaHora, int nuevoMinuto, int nuevoDia, int nuevoMes, int nuevoYear){
         horas.setValue(nuevaHora);
         minutos.setValue(nuevoMinuto);
         horas.validar();
         minutos.validar();
+        dia.setValue(nuevoDia);
+        if (dia.getValue() == 0){
+            dia.setValue(1);
+        }
+        mes.setValue(nuevoMes);
+        if (mes.getValue() == 0){
+            mes.setValue(1);
+        }
+        year.setValue(nuevoYear);
         getDisplayValue();
     }
     
